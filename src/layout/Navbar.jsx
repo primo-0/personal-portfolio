@@ -27,7 +27,7 @@ export const Navbar = () => {
             </div>
             {/* CTA button */}
             <div>
-                <Button>Contact Me</Button>
+                <Button size="sm">Contact Me</Button>
             </div>
         </nav>
     </header>
