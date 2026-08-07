@@ -1,26 +1,26 @@
 const projects =[
     {
         title: "YouTube clone",
-        description:"",
+        description:"A responsive YouTube homepage clone built with HTML and CSS to replicate the layout and user interface of the original platform. This project focuses on creating a clean, responsive design using modern CSS techniques while improving front-end development skills.",
         image:"/public/project1.png",
         tags: ["HTML", "CSS"],
-        link:"#",
+        link:"https://primo-0.github.io/YouTube-Clone/",
         github:"https://github.com/primo-0/YouTube-Clone",
     },
     {
         title: "Rock, Paper, Scissors",
-        description:"",
+        description:"An interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript. Players compete against the computer while scores are tracked using Local Storage. The project demonstrates fundamental JavaScript concepts including DOM manipulation, event handling, conditional logic, and persistent data storage.",
         image:"/public/project3.png",
         tags: ["HTML", "CSS", "JavaScript"],
-        link:"#",
+        link:"https://primo-0.github.io/rock-paper-scissors/",
         github:"https://github.com/primo-0/rock-paper-scissors",
     },
     {
         title: "ToDo List",
-        description:"",
+        description:" A task management application that allows users to create, organize, and remove daily tasks. The application dynamically updates the interface while storing task information locally, providing a simple and efficient way to manage personal to-do lists.",
         image:"/public/project2.png",
         tags: ["HTML", "CSS", "JavaScript"],
-        link:"#",
+        link:"https://primo-0.github.io/todo_list/",
         github:"https://github.com/primo-0/todo_list",
     },
 ]
@@ -65,6 +65,15 @@ export const Projects = () => {
                             bg-gradient-to-t from-card via-card/50
                             to-transparent opacity-60"
                             />
+                            {/* OVERLAYLINKS */}
+                            <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <a>
+                                    <ArrowUpRight/>
+                                </a>
+                                <a>
+                                    <Github/>
+                                </a>
+                            </div>
                             </div>
                         </div>
                 ))}
