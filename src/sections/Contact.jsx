@@ -67,12 +67,11 @@ export const Contact = () => {
         });
         setFormData ({ name: "", email: "", message: ""})
         } catch (err) {
-            console.error("EmailJS error: error");
+            console.error("EmailJS error:", err);
             setSubmitStatus({
                 type: "error",
-                message:
-                error.text || "Failed to send message. Please try again later."
-            })
+                message: err?.text || err?.message || "Failed to send message. Please try again later.",
+            });
         } finally {
             setIsLoading (false)
         }
@@ -128,7 +127,7 @@ export const Contact = () => {
                         className="block text-sm font-medium mb-2">
                             Email</label>
                         <input  
-                        id="name" 
+                        id="email" 
                         type="email" 
                         required
                         placeholder="your@email.com"
@@ -145,7 +144,7 @@ export const Contact = () => {
                         >Message</label>
                         <textarea 
                         rows={5}
-                        id="name" 
+                        id="message" 
                         type="text" 
                         required
                         placeholder="Your message"
